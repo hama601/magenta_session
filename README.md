@@ -11,7 +11,7 @@ Do you have any MIDI instrument? If then, you can do call & response with magent
 
 (Sorry about my poor keyboard play!)
 
-You can deploy your own Magenta Session to Heroku by following button.
+You can deploy your own magenta session to Heroku by using the following button.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -26,7 +26,7 @@ The model is ported from [ai-duet](https://github.com/googlecreativelab/aiexperi
 1. Install `magenta_session`
 2. Run `python server/server.py`
 3. Access the [Server(localhost:8080)](http://localhost:8080)
-4. Session Now! (please refer following image).
+4. Session Now! (Please refer to the following image.)
 
 ![gui.PNG](./docs/gui.PNG)
 
@@ -42,13 +42,14 @@ Please refer [magenta installation guide](https://github.com/tensorflow/magenta#
 
 ### Miniconda
 
-Install the [Miniconda](https://conda.io/miniconda.html) (Miniconda3 is also ok), and create the Magenta environment.
+Install the [Miniconda](https://conda.io/miniconda.html) (Miniconda3 is also OK), and create the Magenta environment.
 
 ```
 conda create -n magenta numpy scipy scikit-learn matplotlib jupyter pyyaml
 ```
 
-(If you use Miniconda3, please set `python=2.7` additionaly when create magenta environment. Because Magenta only works on Python2!)
+(If you use Miniconda3, please set `python=2.7` additionally when creating the
+magenta environment because Magenta only works on Python 2!)
 
 Then activate the `magenta` environment, and install the dependencies.
 
@@ -60,24 +61,24 @@ pip install -r requirements.txt
 **CAUTION**
 
 * `pyenv` user will have the trouble with `source activate magenta`. To avoid this, configure your environment by `pyenv versions`, and use `pyenv local` to set the magenta environment that you created.
-* `TensorFlow` does not support Windows except the Python3.5 version (and Magenta does not work on Python3.5!). So If you want to run it on Windows, you have to use [bash on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
+* `TensorFlow` does not support Windows except the Python 3.5 version (and Magenta does not work on Python 3.5!). So if you want to run it on Windows, you have to use [bash on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
 
 
 ### Docker
 
-Docker is an open-source containerization software which simplifies installation across various OSes.Once you have Docker installed, you can just run:
+Docker is an open-source containerization software which simplifies installation across various OSes. Once you have Docker installed, you can just run:
 
 ```bash
 $ docker run -it --rm -p 80:8080 asashiho/magenta_session
 ```
 
-If you want to build DockerImage yourself, you can just run:
+If you want to build a Docker image yourself, you can just run:
 
 ```bash
 $ docker build -t magenta_session .
 $ docker run -it --rm -p 80:8080 magenta_session
 ```
-**Tips!** Docker to automatically clean up the container and remove the file system when the container exits, you can add the `--rm`
+**Tip!** To have Docker automatically clean up the container and remove the file system when the container exits, you can add the `--rm` option.
 
 You can now play with `magenta_session` at `http://<docker-server-ipaddress>/`.
 
