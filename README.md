@@ -48,7 +48,7 @@ Install the [Miniconda](https://conda.io/miniconda.html) (Miniconda3 is also ok)
 conda create -n magenta numpy scipy scikit-learn matplotlib jupyter pyyaml
 ```
 
-(If you use Miniconda3, please set `python=2.7` additionaly when create magenta environment. Because Magenta only works on Python2!)
+(If you use Miniconda3, please set `python=2.7` additionally when create magenta environment. Because Magenta only works on Python 2!)
 
 Then activate the `magenta` environment, and install the dependencies.
 
